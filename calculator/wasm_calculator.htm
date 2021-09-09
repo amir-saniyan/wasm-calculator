@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Wasm Calculator</title>
+
+        <script src="./calculator.js"></script>
+
+        <script>
+            let calculatorModule;
+
+            createCalculator()
+            .then(module => {
+                calculatorModule = module;
+
+                console.log("calculatorModule:", calculatorModule);
+
+                console.log("getMajorVersion():", calculatorModule.getMajorVersion());
+
+                console.log("getMinorVersion():", calculatorModule.getMinorVersion());
+
+                console.log("getPatchVersion():", calculatorModule.getPatchVersion());
+
+                console.log("getVersionString():", calculatorModule.getVersionString());
+
+                console.log("add(1, 2):", calculatorModule.add(1, 2));
+
+                console.log("subtract(1, 2):", calculatorModule.subtract(1, 2));
+
+                console.log("multiply(1, 2):", calculatorModule.multiply(1, 2));
+
+                console.log("divide(1, 2):", calculatorModule.divide(1, 2));
+            })
+            .catch(function(error) {
+                console.error("createCalculator failed:", error);
+            });
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Wasm Calculator</h1>
+    </body>
+</html>

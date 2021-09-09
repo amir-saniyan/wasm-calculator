@@ -1,0 +1,5 @@
+# qtcreator generated files
+CMakeLists.txt.user*
+
+# build directory
+build/
