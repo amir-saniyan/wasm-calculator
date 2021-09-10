@@ -21,7 +21,7 @@ emcmake cmake \
 cmake \
     --build .
 
-if [ "$1" == "" ] || [ $# -gt 1 ] || [ $1 != "--no_browse" ]; then
+if [ "$1" == "" ] || [ $# -gt 1 ] || [ $1 != "--no_browser" ]; then
     emrun \
         --serve_root "$BUILD_PATH" \
         --hostname localhost \

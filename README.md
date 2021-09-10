@@ -55,7 +55,7 @@ $ ./build.sh
 
 # --- or ---
 
-$ ./build.sh --no_browse
+$ ./build.sh --no_browser
 ```
 
 ## Deployment
